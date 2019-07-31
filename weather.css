@@ -1,0 +1,111 @@
+body{
+    display: grid;
+    grid-template-rows: 25px 25px 1000px 100px;
+    grid-template-areas:
+        "header"
+        "subheader"
+        "widgets"
+        "footer";
+    grid-gap: 10px;
+    background: #001f3f;    
+}
+header{
+    grid-area: header;
+    display: grid;   
+    grid-template-columns: 4fr 2fr 4fr;
+    grid-template-areas: 
+        "logo home settings"
+}
+.home {
+    grid-area: home;
+}
+.settings {
+    grid-area: settings;
+}
+#widg {
+    display: grid;   
+    grid-area: widgets;
+    grid-template-columns: 4fr 2fr 4fr;
+    grid-template-areas: "left widget right"
+
+}
+#displayWeather{
+    grid-area: widget;
+    border-radius: 40px;
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+.widget{
+    grid-area: widget;
+    background: blue;
+    border: 10px outset #1C6EA4;
+    border-radius: 40px;
+    width: 400px;
+    height: 200px;
+}
+
+.temp{    
+    padding-left: 2%;
+    font-size: 20px;
+    font: bold;
+}
+.textbox {
+    margin-left: 10%;
+    display: grid;   
+    grid-area: subheader;
+    grid-template-columns: 4fr 1fr 1fr 4fr;
+    grid-template-areas: "left CityTextBox get right"
+
+}
+#cityName{
+    grid-area: CityTextBox;
+    z-index: 1;
+}
+/*
+humidity: 78
+pressure: 1006
+temp: 27.94
+temp_max: 30
+temp_min: 26
+*/
+#checkboxes{
+    grid-area: right;
+}
+#getCityWeather{
+    
+    grid-area: get;
+    width: 5px;
+}
+.name { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 40px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center;
+}
+
+#wicon{
+    margin-left: 50%;
+    width: 170px;
+    height: 170px;
+}
+
+.close {
+    float: right;
+    padding-top: 10px;
+    padding-right: 20px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    float: right;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+  
