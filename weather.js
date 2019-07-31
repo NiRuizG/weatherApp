@@ -58,7 +58,7 @@ function changeSettings() {
         settings = 1;
         i = 0;        
         document.getElementById("button").innerHTML = "Go to Home";
-        document.body.innerHTML += '<div class="textbox" id="txt"><input id="cityName" placeholder="Add a new city"></input><button id="getCityWeather" onclick="addCityToTab();"></button></div>'
+        document.body.innerHTML += '<div class="textbox" id="txt"><input id="cityName" placeholder="Add a new city"></input><button id="getCityWeather" onclick="addCityToTab();"><b>Add</b></button></div>'
         displayCityWeather(cityNames);
     }
     else if (document.getElementById("button").innerHTML === "Go to Home"){
@@ -86,7 +86,7 @@ function displayCityWeather(cityNames) {
         })
         .then(function(resJson) {
             var iconcode = resJson.weather[0].icon;
-            document.getElementById("displayWeather").innerHTML += `<div id="${resJson.name}" class="widget">${close}<div class ="name">${resJson.name}, ${resJson.sys.country}</div><div class="temp">temp: ${resJson.main.temp}°C</div><img id="wicon" src="http://openweathermap.org/img/w/${iconcode}.png" alt="Weather icon"></div>`;
+            document.getElementById("displayWeather").innerHTML += `<div id="${resJson.name}" class="widget">${close}<div class ="name">${resJson.name}, ${resJson.sys.country}</div><div class="temp">temperature: ${resJson.main.temp}°C</div><img id="wicon" src="http://openweathermap.org/img/w/${iconcode}.png" alt="Weather icon"></div>`;
             return resJson;
         })
         i = i + 1;

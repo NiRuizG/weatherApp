@@ -7,7 +7,7 @@ body{
         "widgets"
         "footer";
     grid-gap: 10px;
-    background: #001f3f;    
+    background: white;    
 }
 header{
     grid-area: header;
@@ -73,7 +73,7 @@ temp_min: 26
 #getCityWeather{
     
     grid-area: get;
-    width: 5px;
+    width: 50px;
 }
 .name { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 40px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center;
 }
@@ -83,7 +83,6 @@ temp_min: 26
     width: 170px;
     height: 170px;
 }
-
 .close {
     float: right;
     padding-top: 10px;
